@@ -1,0 +1,16 @@
+name: Verify picker
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build:data
+      - run: git diff --exit-code -- panel/emoji-data.js assets/EMOJIBASE-LICENSE
+      - run: npx playwright install --with-deps chromium
+      - run: npm run verify

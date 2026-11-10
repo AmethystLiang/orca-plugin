@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Emoji Picker</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main class="picker" aria-label="Emoji picker">
+    <header>
+      <div class="heading"><div><div class="eyebrow">A LITTLE MORE EXPRESSION</div><h1>Find your emoji<span aria-hidden="true">.</span></h1></div><div class="heading-mark" aria-hidden="true">☺</div></div>
+      <p class="subtitle">The right feeling, one click away.</p>
+      <div class="search-wrap"><span data-icon="search"></span><input id="search" type="search" placeholder="Search anything…" aria-label="Search emoji" autocomplete="off" spellcheck="false"><button id="clear" class="icon-button" aria-label="Clear search" hidden><span data-icon="close"></span></button><kbd id="search-hint">/</kbd></div>
+      <nav class="collections" aria-label="Emoji collections"><button data-collection="all" aria-pressed="true"><span data-icon="grid"></span>All emoji</button><button data-collection="recent" aria-pressed="false"><span data-icon="clock"></span>Recent</button><button data-collection="saved" aria-pressed="false"><span data-icon="heart"></span>Saved<span id="saved-count" hidden></span></button></nav>
+    </header>
+    <div class="browse-tools"><nav id="categories" aria-label="Emoji categories"></nav><div class="tone-wrap"><button id="tone-button" class="icon-button" aria-label="Choose skin tone" aria-expanded="false" aria-controls="tone-menu" title="Choose skin tone"><span id="tone-swatch"></span></button><div id="tone-menu" role="group" aria-label="Skin tone" hidden></div></div></div>
+    <div id="results-summary" class="sr-only" role="status" aria-live="polite"></div>
+    <div id="viewport" role="grid" aria-label="Emoji" tabindex="0"><div id="canvas"></div><div id="empty" hidden><div class="empty-icon" aria-hidden="true">⌕</div><h2 id="empty-title">No emoji found</h2><p id="empty-text">Try a different word or a shortcode.</p><button id="empty-action" class="text-button">Clear search</button></div></div>
+    <footer><div id="preview-glyph" aria-hidden="true">✨</div><div class="preview-text"><div id="preview-name">A little goes a long way</div><div id="preview-code">Click an emoji to copy it</div></div><button id="save" class="icon-button" aria-label="Save emoji" aria-pressed="false" hidden><span data-icon="heart"></span></button></footer>
+    <div class="bottom-line"><span><span class="status-dot"></span>Ready when you are</span><span><kbd>↑</kbd><kbd>↓</kbd> browse <span class="key-separator">·</span> <kbd>↵</kbd> copy</span></div>
+    <div id="toast" role="status" aria-live="polite" hidden></div>
+    <dialog id="copy-dialog"><h2>Copy this emoji</h2><p>Press <kbd>⌘ / Ctrl + C</kbd>, then paste anywhere.</p><input id="manual-copy" readonly aria-label="Emoji to copy"><button id="close-dialog" class="text-button">Done</button></dialog>
+  </main>
+</body>
+</html>

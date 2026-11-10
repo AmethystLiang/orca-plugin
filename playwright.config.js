@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./tests',testMatch:'*.spec.js',fullyParallel:true,retries:0,reporter:'list',use:{baseURL:'http://127.0.0.1:4173',viewport:{width:360,height:780},colorScheme:'light',permissions:['clipboard-read','clipboard-write']},webServer:{command:'node scripts/serve.mjs',url:'http://127.0.0.1:4173/panel/index.html',reuseExistingServer:!process.env.CI}});

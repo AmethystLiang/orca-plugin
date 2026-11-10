@@ -1,0 +1,20 @@
+{
+  "name": "amethyst-orca-emoji",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A fast, offline emoji palette for the Orca sidebar.",
+  "author": "AmethystLiang",
+  "license": "MIT",
+  "scripts": {
+    "build:data": "node scripts/build-data.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "playwright test",
+    "verify": "npm test && npm run test:browser"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "emojibase-data": "18.0.0",
+    "sharp": "0.35.5"
+  }
+}

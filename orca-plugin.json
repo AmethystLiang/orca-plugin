@@ -1,0 +1,35 @@
+{
+  "manifestVersion": 2,
+  "id": "emoji-picker",
+  "name": "Emoji Picker",
+  "version": "1.0.0",
+  "description": "A beautiful, fast emoji palette in your sidebar. Search 1,900+ emoji, save favorites, choose skin tones, and copy in a click. Works entirely offline.",
+  "engines": {
+    "orca": ">=1.4.246"
+  },
+  "execution": "sandboxed-ui",
+  "pluginApi": 1,
+  "contributes": {
+    "panels": [
+      {
+        "id": "emoji-picker",
+        "title": "Emoji Picker",
+        "icon": "star",
+        "entry": "panel/index.html"
+      }
+    ]
+  },
+  "capabilities": [],
+  "author": {
+    "name": "AmethystLiang",
+    "url": "https://github.com/AmethystLiang"
+  },
+  "repository": "https://github.com/AmethystLiang/orca-plugin",
+  "homepage": "https://github.com/AmethystLiang/orca-plugin",
+  "license": "MIT",
+  "icon": "assets/icon.png",
+  "cover": {
+    "path": "assets/cover.png",
+    "alt": "Emoji Picker with neutral light and dark themes, emoji search, collections, categories, and a preview in the Orca sidebar."
+  }
+}
